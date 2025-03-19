@@ -9,3 +9,8 @@ if (random <5) {
     return answer = choices.slice(13)
 }
 }
+function getHumanChoice () {
+    userChoice = prompt("Rock?Paper?Scissors?")
+    return userChoice
+}
+console.log(getHumanChoice())
