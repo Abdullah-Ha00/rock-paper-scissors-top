@@ -13,5 +13,47 @@ function getHumanChoice () {
     userChoice = prompt("Rock?Paper?Scissors?")
     return userChoice
 }
-humanScore = 0
-computerScore = 0
+let humanScore = 0
+let computerScore = 0
+function playRound(humanChoice, computerChoice) {
+    console.log(`Human chose ${humanChoice}. Computer chose ${computerChoice}.`)
+    if (humanChoice.toLowerCase()!= "rock" && humanChoice.toLowerCase()!= "paper" && humanChoice.toLowerCase()!= "scissors") {
+        return "Please choose rock, paper, or scissors!"
+    }else if (humanChoice.toLowerCase() == computerChoice.toLowerCase()) {
+        return "It's a draw!"
+        
+    }else if (humanChoice.toLowerCase() == "rock" && computerChoice =="scissors"){
+        humanScore++
+        return "You win!, rock beats scissors!"
+    }else if (humanChoice.toLowerCase() == "rock" && computerChoice =="paper"){
+        computerScore++
+        return "You lose!, paper beats rock!"
+      
+    }else if (humanChoice.toLowerCase() == "paper" && computerChoice =="rock"){
+        humanScore++
+        return "You win!, paper beats rock!"
+        
+    }else if (humanChoice.toLowerCase() == "paper" && computerChoice =="scissors"){
+        computerScore++
+        return "You lose!, scissors beats paper!"
+        
+    }else if (humanChoice.toLowerCase() == "scissors" && computerChoice =="paper"){
+        humanScore++
+        return "You win!, scissors beats paper!"
+       
+    }else 
+       computerScore++
+       return "You lose! rock beats scissors!"
+        
+         
+}
+humanSelection =getHumanChoice()
+computerSelection = getComputerChoice()
+console.log(playRound(humanSelection, computerSelection))
+console.log(humanScore, computerScore)
+
+    
+
+        
+
+
