@@ -47,10 +47,21 @@ function playRound(humanChoice, computerChoice) {
         
          
 }
-humanSelection =getHumanChoice()
-computerSelection = getComputerChoice()
-console.log(playRound(humanSelection, computerSelection))
-console.log(humanScore, computerScore)
+let round = 5
+while (round >0) {
+    let humanSelection =getHumanChoice()
+    let computerSelection = getComputerChoice()
+    console.log(playRound(humanSelection, computerSelection))
+    console.log(humanScore, computerScore)
+    round--
+} 
+if (humanScore > computerScore) {
+    console.log("You win! Please play again soon!")
+}else if (computerScore> humanScore){
+    console.log("You lose! Better luck next time!")
+}else {
+    console.log("There is no winner! Try again!")
+}
 
     
 
