@@ -13,4 +13,5 @@ function getHumanChoice () {
     userChoice = prompt("Rock?Paper?Scissors?")
     return userChoice
 }
-console.log(getHumanChoice())
+humanScore = 0
+computerScore = 0
